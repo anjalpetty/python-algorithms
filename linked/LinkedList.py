@@ -1,11 +1,10 @@
 # Create a Node class to create a node
-from typing import List
 
 
 class Node:
-  def __init__(self, data):
+  def __init__(self, data, next=None):
     self.data = data
-    self.next = None
+    self.next = next
 
 # Create a LinkedList class
 class LinkedList:
@@ -38,6 +37,7 @@ class LinkedList:
       else:
         curr.next = Node(n)
         curr = curr.next
+    return self.head
 
   # Method to add a node at any index
   # Indexing starts from 0.
@@ -164,6 +164,18 @@ class LinkedList:
       else:
         print(curr.data, end='')
       curr = curr.next
+    print("")
+
+  # print method for the linked list
+  def print_LL(self, ):
+    curr = self.head
+    while curr:
+      if curr.next is not None:
+        print(curr.data, end='->')
+      else:
+        print(curr.data, end='')
+      curr = curr.next
+    print("")
 
 if __name__ == '__main__':
   # create a new linked list

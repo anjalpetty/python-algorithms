@@ -35,7 +35,7 @@ def add_two_numbers(l1: Optional[Node], l2: Optional[Node]) -> Optional[Node]:
     result.next = Node(carry)
   return dummy.next
 
-def print_ll(head: Optional[Node]):
+def print_LL(head: Optional[Node]):
   while head:
     if head.next is not None:
       print(head.data, end='->')
@@ -51,10 +51,10 @@ if __name__ == '__main__':
   l1.construct([2,4,3])
   l2.construct([5,6,4])
   res = add_two_numbers(l1.get_head(), l2.get_head())
-  print_ll(res)
+  print_LL(res)
 
   l1.construct([9,9,9,9,9,9,9])
   l2.construct([9,9,9,9])
 
   res = add_two_numbers(l1.get_head(), l2.get_head())
-  print_ll(res)
+  print_LL(res)

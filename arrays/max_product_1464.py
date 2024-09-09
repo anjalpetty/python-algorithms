@@ -10,14 +10,14 @@ you will get the maximum value, that is, (nums[1]-1)*(nums[2]-1) = (4-1)*(5-1) =
 
 
 def max_product(nums):
-  first_max = second_max = 0
-  for i in range(0, len(nums)):
-    if nums[i] > first_max:
-      second_max = first_max
-      first_max = nums[i]
-    elif nums[i] > second_max:
-      second_max = nums[i]
-  return (first_max - 1) * (second_max - 1)
+  max1 = max2 = 0
+  for n in nums:
+    if n > max1:
+      max2 = max1
+      max1 = n
+    elif n > max2:
+      max2 = n
+  return (max1 - 1) * (max2 - 1)
 
 
 if __name__ == '__main__':

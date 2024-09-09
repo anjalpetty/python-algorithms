@@ -1,6 +1,6 @@
 """
 Leetcode: 152. Maximum product subarray
-Given an integer array, find the subarray that has the largest product
+Given an integer array, find the continuous subarray that has the largest product
 
 Example: 1
 input : nums=[2,3,-2,4]

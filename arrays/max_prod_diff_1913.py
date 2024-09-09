@@ -1,5 +1,5 @@
 """
-Leetcode1913. Maximum Product Difference Between Two Pairs
+Leetcode: 1913. Maximum Product Difference Between Two Pairs
 
 Hint
 The product difference between two pairs (a, b) and (c, d) is defined as (a * b) - (c * d).

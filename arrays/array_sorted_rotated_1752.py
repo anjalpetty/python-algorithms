@@ -1,4 +1,3 @@
-from typing import List
 
 """
 Leetcode: 172, Check if array is sorted and rotated
@@ -15,6 +14,8 @@ Example: 3
 input : nums[1,2,3]
 output: true
 """
+
+from typing import List
 
 def check(nums: List[int]):
 

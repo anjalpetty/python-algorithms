@@ -10,7 +10,7 @@ def remove_nth_from_end(head: Optional[Node], n: int) -> Optional[Node]:
   start = dummy
   end = head
 
-  # move pointer to nth position from begining
+  # move pointer to nth position from beginning
   while n > 0 and end:
     end = end.next
     n -= 1

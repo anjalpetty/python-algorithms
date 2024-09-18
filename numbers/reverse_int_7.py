@@ -18,28 +18,16 @@ Output: 21
 
 def reverse(x: int) -> int:
 
-  # signed = False
-  # if x < 0:
-  #   signed = True
-  # x = abs(x)
-
   if x < 0:
     symbol = -1
   else:
     symbol = 1
 
-  MIN = -2 ^ 31
-  MAX = 2 ^ 31 - 1
+  x = abs(x)
   res = 0
   while x > 0:
     res = (res * 10) + (x % 10)
     x //= 10
-    # if res > MAX or res <MIN:
-    #   return 0
-
-
-  # if signed:
-  #   res = -1 * res
 
   # return res
   return 0 if res > 2**31 else res*symbol

@@ -10,7 +10,7 @@ return the kth smallest value (1-indexed) of all the values of the nodes in the 
   \
    2
 
-Tip: process like in order travel and return the kthe element
+Tip: process like in order traversal and return the k-th element
 """
 
 from typing import Optional

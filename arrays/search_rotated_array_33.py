@@ -35,9 +35,32 @@ def search(nums, target, left, right):
       return search(nums, target, left, mid - 1)
 
 
+def search_non_recursive(nums, target):
+  l, r = 0, len(nums) - 1
+
+  while l <= r:
+    mid = (l + r) // 2
+    if target == nums[mid]:
+      return mid
+
+    # left sorted portion
+    if nums[l] <= nums[mid]:
+      if target > nums[mid] or target < nums[l]:
+        l = mid + 1
+      else:
+        r = mid - 1
+    # right sided portion
+    else:
+      if target < nums[mid] or target > nums[r]:
+        r = mid - 1
+      else:
+        l = mid + 1
+    return -1
+
+
 if __name__ == '__main__':
   input1 = [4, 5, 6, 7, 0, 1, 2]
   print(search(input1, 0, 0, len(input1) - 1))  # expects 4
 
   input2 = [4, 5, 6, 7, 0, 1, 2]
-  print(search(input2, 3, 0, len(input2) - 1))  # expects -1
+  print(search_non_recursive(input2, 3))  # expects -1

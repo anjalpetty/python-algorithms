@@ -1,5 +1,5 @@
 """
-Leetcod: 53. Maximum subaray
+Leetcode: 53. Maximum subarray
 
 Given an integer array nums, find the subarray with the largest sum
 

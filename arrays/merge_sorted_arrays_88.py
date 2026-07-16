@@ -6,7 +6,7 @@ and two integers m and n, representing the number of elements in nums1 and nums2
 Merge nums1 and nums2 into a single array sorted in non-decreasing order.
 The final sorted array should not be returned by the function, but instead be stored inside the array nums1.
 To accommodate this, nums1 has a length of m + n
-input : [1,2,3,0,0,0], [2, 5, 6]
+input : [1, 2, 3, 0, 0, 0], [2, 5, 6]
 output: [1, 2, 2, 3, 5, 6]
 """
 from typing import List

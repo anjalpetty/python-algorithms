@@ -33,6 +33,25 @@ def kth_small(root: Optional[Tnode], k: int) -> int:
       return curr.data
     curr = curr.right
 
+def kthsmall(root: Optional[Tnode], k:int) -> int:
+  count = 0
+  result = None
+
+  def inorder(n: Optional[Tnode]):
+    nonlocal count, result
+    if n is None or result is not None:
+      return
+
+    inorder(n.left)
+    count += 1
+    if count == k:
+      result = n.data
+      return
+    inorder(n.right)
+
+  inorder(root)
+  return result
+
 if __name__ == '__main__':
   root = Tnode(3)
   root.left = Tnode(1)
@@ -48,4 +67,4 @@ if __name__ == '__main__':
   root.left.left = Tnode(2)
   root.left.right = Tnode(4)
   root.left.left.left = Tnode(1)
-  print("kth small:", kth_small(root, 3))
+  print("kth small:", kthsmall(root, 3))

@@ -1,6 +1,6 @@
 
 """
-Leetcode: 172, Check if array is sorted and rotated
+Leetcode: 1752, Check if array is sorted and rotated
 Given an array, return true if the array was sorted and then rotated. False otherwise
 Example: 1
 input : nums = [3,4,5,1,2]
